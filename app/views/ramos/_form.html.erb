@@ -1,0 +1,25 @@
+<%= form_for(@ramo) do |f| %>
+  <% if @ramo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ramo.errors.count, "error") %> prohibited this ramo from being saved:</h2>
+
+      <ul>
+      <% @ramo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :estudiante_id %><br>
+    <%= f.text_field :estudiante_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

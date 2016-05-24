@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @ramo.nombre %>
+</p>
+
+<p>
+  <strong>Estudiante:</strong>
+  <%= @ramo.estudiante %>
+</p>
+
+<%= link_to 'Edit', edit_ramo_path(@ramo) %> |
+<%= link_to 'Back', ramos_path %>

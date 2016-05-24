@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ramos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Estudiante</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ramos.each do |ramo| %>
+      <tr>
+        <td><%= ramo.nombre %></td>
+        <td><%= ramo.estudiante %></td>
+        <td><%= link_to 'Show', ramo %></td>
+        <td><%= link_to 'Edit', edit_ramo_path(ramo) %></td>
+        <td><%= link_to 'Destroy', ramo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ramo', new_ramo_path %>
